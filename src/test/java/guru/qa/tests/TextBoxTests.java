@@ -1,4 +1,4 @@
-package guru.qa;
+package guru.qa.tests;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -28,6 +28,6 @@ public class TextBoxTests {
         $("#name").shouldHave(text("Alex"));
         $("#email").shouldHave(text("alex@qaguru.com"));
         $("#currentAddress", 1).shouldHave(text("some street 1"));
-        $("#permanentAddress", 1).shouldHave(text("another street 2"));
+        $("p#permanentAddress").shouldHave(text("another street 2"));
     }
 }
